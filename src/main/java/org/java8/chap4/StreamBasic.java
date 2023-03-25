@@ -13,7 +13,12 @@ import java.util.stream.Collectors;
  */
 public class StreamBasic {
     public static void main(String[] args) {
+        // Java 7
+        getLowCaloricDishesNamesInJava7(Dish.menu).forEach(System.out::println);
 
+        System.out.println("-----------");
+
+        getLowCaloricDishesNameInJava8(Dish.menu).forEach(System.out::println);
     }
 
     public static List<String> getLowCaloricDishesNamesInJava7(List<Dish> dishes) {
@@ -26,7 +31,7 @@ public class StreamBasic {
         }
 
         List<String> lowCaloricDishesName = new ArrayList<>();
-        Collections.sort(lowCaloricDishesName, new Comparator<Dish>() {
+        Collections.sort(lowCaloricDishes, new Comparator<Dish>() {
             @Override
             public int compare(Dish d1, Dish d2) {
                 return Integer.compare(d1.getCalories(), d2.getCalories());

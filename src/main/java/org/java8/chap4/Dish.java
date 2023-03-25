@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author 滕广银
- * @description TODO
+ * @description 流式API验证
  * @date 2023/3/25 14:08
  */
 public class Dish {
@@ -48,5 +48,10 @@ public class Dish {
             Arrays.asList(new Dish("pork", false, 800, Dish.Type.MEAT),
                     new Dish("beef", false, 700, Dish.Type.MEAT),
                     new Dish("chicken", false, 400, Dish.Type.MEAT),
-                    new Dish("french fries", true, 530, Dish.Type.MEAT));
+                    new Dish("french fries", true, 530, Dish.Type.MEAT),
+                    new Dish("rice", true, 350, Dish.Type.OTHER),
+                    new Dish("season fruit", true, 120, Dish.Type.OTHER),
+                    new Dish("pizza", true, 550, Dish.Type.OTHER),
+                    new Dish("prawns", false, 400, Dish.Type.FISH),
+                    new Dish("salmon", false, 450, Dish.Type.FISH));
 }
