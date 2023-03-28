@@ -1,5 +1,6 @@
 package org.java8.ch5;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 /**
@@ -17,5 +18,8 @@ public class BuildingStreams {
         Stream<String> emptyStream = Stream.empty();
 
         int[] numbers = {2, 3, 5, 11, 13};
+        System.out.println(Arrays.stream(numbers).sum());
+
+        Stream.iterate()
     }
 }
