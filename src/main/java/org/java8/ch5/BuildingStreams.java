@@ -26,6 +26,11 @@ public class BuildingStreams {
 
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]})
                 .limit(10)
-                .forEach(t -> System.out.println(""));
+                .map(t -> t[0])
+                .forEach(System.out::println);
+
+        Stream.generate(Math::random)
+                .limit(10)
+                .forEach(System.out::println);
     }
 }
