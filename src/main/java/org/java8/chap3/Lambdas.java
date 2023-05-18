@@ -18,7 +18,10 @@ public class Lambdas {
         Runnable r = () -> System.out.println("Hello!");
         r.run();
 
-        Arrays.asList(new Apple(80, "green"), new Apple(155, "green"));
+        List<Apple> greenApples = Arrays.asList(new Apple(80, "green"), new Apple(155, "green"), new Apple(120, "red"));
+        System.out.println(greenApples);
+
+
     }
 
     public static List<Apple> filter(List<Apple> inventory, ApplePredicate p) {
@@ -30,6 +33,7 @@ public class Lambdas {
         }
         return result;
     }
+
     public static class Apple {
         private int weight = 0;
         private String color = "";
