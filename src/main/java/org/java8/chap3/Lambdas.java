@@ -1,8 +1,5 @@
 package org.java8.chap3;
 
-import org.java8.chap1.FilteringApples;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -54,16 +51,8 @@ public class Lambdas {
             return weight;
         }
 
-        public void setWeight(Integer weight) {
-            this.weight = weight;
-        }
-
         public String getColor() {
             return color;
-        }
-
-        public void setColor(String color) {
-            this.color = color;
         }
 
         public String toString() {

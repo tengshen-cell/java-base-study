@@ -1,4 +1,4 @@
-package org.java8.ch5;
+package org.java8.chap5;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
