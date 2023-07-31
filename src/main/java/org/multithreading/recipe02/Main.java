@@ -5,25 +5,24 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author 滕广银
  * @description TODO
- * @date 2023/3/17 15:07
+ * @date 2023/7/31 22:11
  */
 public class Main {
     public static void main(String[] args) {
-        Thread task = new PrimeGenerator();
-        task.start();
+        PrimeGenerator primeGenerator = new PrimeGenerator();
+        primeGenerator.start();
 
-        // wait 5 seconds
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
-        task.interrupt();
+        // Interrupt the prime number generator
+        primeGenerator.interrupt();
 
-        System.out.printf("");
-        System.out.printf("");
-        System.out.printf("");
-
+        System.out.printf("Main: Status of the Thread : %s\n", primeGenerator.getState());
+        System.out.printf("Main: isInterrupted: %s\n", primeGenerator.isInterrupted());
+        System.out.printf("Main: isAlive: %s\n", primeGenerator.isAlive());
     }
 }
