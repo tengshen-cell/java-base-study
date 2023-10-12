@@ -14,7 +14,7 @@ public class Main {
         ParkingCash cash = new ParkingCash();
         ParkingStats stats = new ParkingStats(cash);
 
-        System.out.printf("Parking Simulator\n");
+        System.out.print("Parking Simulator\n");
 
         int numberSensors = 2 * Runtime.getRuntime().availableProcessors();
         Thread[] threads = new Thread[numberSensors];
