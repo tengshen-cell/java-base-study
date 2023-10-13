@@ -15,6 +15,7 @@ public class ObserverMain {
 
     interface Subject {
         void registerObserver(Observer o);
+
         void notifyObserver(String tweet);
     }
 
@@ -23,7 +24,7 @@ public class ObserverMain {
         @Override
         public void inform(String tweet) {
             if (tweet != null && tweet.contains("money")) {
-                System.out.println("Breaking news in NY!" + tweet );
+                System.out.println("Breaking news in NY!" + tweet);
             }
 
         }
